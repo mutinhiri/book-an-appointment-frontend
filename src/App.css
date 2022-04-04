@@ -43,12 +43,12 @@ div.content {
     position: relative;
   }
 
-  .sidebar a { 
-    float: left; 
+  .sidebar a {
+    float: left;
   }
 
-  div.content { 
-    margin-left: 0; 
+  div.content {
+    margin-left: 0;
   }
 }
 
