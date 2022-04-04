@@ -28,7 +28,7 @@
   color: black;
 }
 
-/* Style the active/current link*/
+/* Style the active/current link */
 .header a.active {
   background-color: dodgerblue;
   color: white;
@@ -46,6 +46,7 @@
     display: block;
     text-align: left;
   }
+
   .header-right {
     float: none;
   }
