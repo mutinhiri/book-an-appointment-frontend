@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Appointment from './components/appointments/Appointments';
 import AppointmentForm from './components/appointments/AppointmentForm';
+import DoctorCard from './components/Main/DoctorCard';
 import './App.css';
 
 const Home = () => (
@@ -12,6 +13,8 @@ const Home = () => (
   <BrowserRouter>
     <SideBar />
     <div className="content">
+      <h1>content</h1>
+      <DoctorCard />
       <Header />
       <div className="home-content">
         <Routes>
