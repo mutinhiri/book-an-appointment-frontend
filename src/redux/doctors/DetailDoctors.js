@@ -13,7 +13,7 @@ const initialState = {
 
 const doctorsDetailReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_DETAIL_MOTORS:
+    case FETCH_DETAIL_DOCTORS:
       return { ...state, doctors: action.payload };
     default:
       return state;
