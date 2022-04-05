@@ -14,9 +14,16 @@ const DoctorCard = ({doctor, onClick }) => {
         </div>
         <div className='card-body'>
           <h5 className='card-title'>{name}</h5>
-          <p
+          <p className='card-text text-muted'>random description here</p>
+          <p className='card-text text-muted'>{speciality}</p>
+          <div className='rounded-circle border border-muted border-2 card-icon-circle justify-content-center align-items-center d-flex mx-1 text-muted'>
+            <FaFacebookF />
+            <BsTwitter />
+            <BsVimeo />
+
+          </div>
         </div>
       </div>
     </button>
-  )
-}
+  );
+};
