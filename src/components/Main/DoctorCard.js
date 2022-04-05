@@ -27,3 +27,14 @@ const DoctorCard = ({doctor, onClick }) => {
     </button>
   );
 };
+
+DoctorCard.PropTypes = {
+  doctor: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    speciality: PropTypes.string.isRequired,
+  }).isRequired,
+  onClick: PropTypes.func.isRequired
+};
+
+export default DoctorCard;
