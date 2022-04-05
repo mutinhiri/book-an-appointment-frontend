@@ -15,3 +15,19 @@ export const getDoctorsDetail = (id) => async (dispatch) => {
     .then((res) => res.json())
     .then((resResponse) => dispatch(fetchDetailDoctors(resResponse)));
 }
+export const AddItemHandler = async (dispatch, data) => {
+  const formData = new FormData();
+  formData.append('name', data.name);
+  formData.append('image', data.image);
+  formData.append('speciality', data.speciality);
+  formData.append('bio', data.bio);
+  formData.append('experience', data.experience);
+  try {
+    const response = await axios.post(`${BaseUrl}doctors/create`, formData)
+    dispatch(addItem(response.data));
+    return response;
+  }
+    catch (err) {
+      return err.response 
+  }
+};
