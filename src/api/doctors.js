@@ -31,3 +31,11 @@ export const AddItemHandler = async (dispatch, data) => {
       return err.response 
   }
 };
+
+export const deleteDoctor = (id) => async (dispatch) => {
+  fetch(`${BaseUrl}doctors/${id}/destroy`, {
+    method: 'DELETE',
+  })
+    .then((res) => res.json())
+    .then((resResponse) => dispatch(removeItem(resResponse)))
+}
