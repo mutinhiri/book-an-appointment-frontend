@@ -14,9 +14,12 @@ const Home = () => (
     <SideBar />
     <div className="content">
       <h1>content</h1>
-      <DoctorCard />
       <Header />
       <div className="home-content">
+        <DoctorCard />
+        <DoctorCard />
+        <DoctorCard />
+
         <Routes>
           <Route path="/appointments" element={<Appointment />} />
           <Route path="/appointment-form" element={<AppointmentForm />} />
