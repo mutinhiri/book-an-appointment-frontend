@@ -12,6 +12,10 @@ const DoctorCard = ({doctor, onClick }) => {
         <div className='card-image'>
           <img src={image} alt={name} className="doctor-card-image" />
         </div>
+        <div className='card-body'>
+          <h5 className='card-title'>{name}</h5>
+          <p
+        </div>
       </div>
     </button>
   )
