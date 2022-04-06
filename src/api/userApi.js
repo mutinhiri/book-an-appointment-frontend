@@ -3,7 +3,7 @@ import BaseUrl from './BaseURL';
 
 const UserApi = async (user) => {
   try {
-    const response = await axios.poat(`${BaseUrl}users`, user);
+    const response = await axios.post(`${BaseUrl}users`, user);
     return { status: response.status, user: response.data };
   } catch (error) {
     return { status: error.response.status, ...error.response.data };
