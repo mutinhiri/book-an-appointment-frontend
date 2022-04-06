@@ -6,7 +6,7 @@ import { getDoctors } from './api/doctors';
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getDoctors)
+    dispatch(getDoctors);
   }, []);
   return (
     <div className="App">
