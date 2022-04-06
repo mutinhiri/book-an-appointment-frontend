@@ -22,7 +22,7 @@ const doctorsReducer = (state = initialState, action) => {
     case FETCH_DOCTORS:
       return { ...state, doctors: action.payload };
     case DELETE_ONE_DOCTOR:
-      return { ...state, doctorss: state.doctors.filter((doctor) => doctor.id !== action.payload) };
+      return { ...state, doctors: state.doctors.filter((doctor) => doctor.id !== action.payload) };
     default:
       return state;
   }
