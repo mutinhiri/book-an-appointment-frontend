@@ -12,5 +12,10 @@ import 'swiper/css'
 const Main = () => {
   const doctors = useSelector((state) => state.doctors.doctors) || [];
   const dispatch = useDispatch();
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const updateDimensions = () => {
+    setWidth(window.innerWidth)
+  };
 
 }
