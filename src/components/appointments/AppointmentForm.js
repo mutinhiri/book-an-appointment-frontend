@@ -55,27 +55,27 @@ const AppointmentForm = () => {
 
   return (
     <div className="appointmentform-page">
-      <form onSubmit={handleSubmit}>
+      <form className="d-flex flex-column h-100 justify-content-center align-items-center" onSubmit={handleSubmit}>
         <section>
           <span>
             {' '}
             {loginResponse}
           </span>
-          <div className="create-appointment-head">
-            <h2>Create Appointment with A Doctor</h2>
-            <p>
+          <div className="d-flex flex-column justify-content-center text-white">
+            <h2 className="text-center">Create Appointment with A Doctor</h2>
+            <p className="text-center">
               Choose from the available locations and the preferred time.
             </p>
           </div>
-          <div className="create-appointment">
-            <select onChange={(e) => setSelectLocation(e.target.value)} value={selectLocation}>
+          <div className="d-flex create-appointment">
+            <select className="form-select me-2 rounded-pill " onChange={(e) => setSelectLocation(e.target.value)} value={selectLocation}>
               {options.map((option) => (
                 <option key={option} value={option}>
                   {option}
                 </option>
               ))}
             </select>
-            <select onChange={(e) => setDoctorId(e.target.value)} value={doctorId}>
+            <select className="form-select me-2 rounded-pill" onChange={(e) => setDoctorId(e.target.value)} value={doctorId}>
               {doctors.map((doctor) => (
                 <option key={doctor.id} value={doctor.id}>
                   {doctor.name}
