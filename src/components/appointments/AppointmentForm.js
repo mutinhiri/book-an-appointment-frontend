@@ -44,6 +44,55 @@ const AppointmentForm = () => {
       }
     }
   };
+  const options = [
+    'maryLand',
+    'Madrid',
+    'Sydney',
+    'New York',
+    'Dubia',
+    'Barcelona',
+  ];
+
+  return (
+    <div className="appointmentform-page">
+      <form>
+        <section>
+          <span>
+            {' '}
+            {loginResponse}
+          </span>
+          <div className="create-appointment-head">
+            <h2>Create Appointment with A Doctor</h2>
+            <p>
+              Choose from the available locations and the preferred time.
+            </p>
+          </div>
+          <div className="create-appointment">
+            <select onChange={(e) => setSelectLocation(e.target.value)} value={selectLocation}>
+              {options.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <select onChange={(e) => setDoctorId(e.target.value)} value={doctorId}>
+              {doctors.map((doctor) => (
+                <option key={doctor.id} value={doctor.id}>
+                  {doctor.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <DatePicker className="w-50 me-2 rounded-pill form-control" onChange={onChange} value={selectDateOfAppointment} />
+          </div>
+          <div className="d-flex w-100 justify-content-center pt-5">
+            <button className="btn btn-outline-success rounded-pill" type="submit">Submit</button>
+          </div>
+        </section>
+      </form>
+    </div>
+  );
 };
 
 export default AppointmentForm;
