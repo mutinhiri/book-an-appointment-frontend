@@ -1,14 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
-import { BsCaretRightFill } from "react-icons/bs";
-import { BsFillCaretLeftFill } from "react-icons/bs";
-import Swiper from "swiper/react";
-import { SwiperSlide } from "swiper/react";
-import './Main.css'
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import DoctorCard from "./DoctorCard";
-import { getDoctorsDetail } from "../../api/doctors";
-import 'swiper/css'
+import { useDispatch, useSelector } from 'react-redux';
+import { BsCaretRightFill, BsFillCaretLeftFill } from 'react-icons/bs';
+import Swiper, { SwiperSlide } from 'swiper/react';
+import './Main.css';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import DoctorCard from './DoctorCard';
+import { getDoctorsDetail } from '../../api/doctors';
+import 'swiper/css';
 
 const Main = () => {
   const doctors = useSelector((state) => state.doctors.doctors) || [];
@@ -16,14 +14,14 @@ const Main = () => {
   const [width, setWidth] = useState(window.innerWidth);
 
   const updateDimensions = () => {
-    setWidth(window.innerWidth)
+    setWidth(window.innerWidth);
   };
 
   useEffect(() => {
     window.addEventListener('resize', updateDimensions);
 
-    return () => window.removeEventListener('resize', updateDimensions)
-  }, [doctors])
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, [doctors]);
 
   const navigate = useNavigate();
 
@@ -51,33 +49,34 @@ const Main = () => {
       </div>
       <div className="d-sm-block d-none">
         <button
-         type="button" className="borderless bg-transparent"
+          type="button"
+          className="borderless bg-transparent"
           onClick={() => {
             const { swiper } = document.querySelector('swiper');
-            swiper.slidePrev();}
-          }
+            swiper.slidePrev();
+          }}
         >
           <div className="main-page-handle-left d-flex justify-content-center align-items-center">
             <BsFillCaretLeftFill />
           </div>
         </button>
         <button
-          type="button" className="borderless bg-transparent"
+          type="button"
+          className="borderless bg-transparent"
           onClick={() => {
-            const { swiper } = document.querySelector('swiper')
-            swiper.slideNext()
+            const { swiper } = document.querySelector('swiper');
+            swiper.slideNext();
           }}
-          >
-            <div className="main-page-handle-right d-flex justify-content-center align-items-center">
-              <BsCaretRightFill />
-            </div>
+        >
+          <div className="main-page-handle-right d-flex justify-content-center align-items-center">
+            <BsCaretRightFill />
+          </div>
 
         </button>
 
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Main;A
-
+export default Main;

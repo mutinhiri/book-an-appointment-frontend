@@ -1,9 +1,9 @@
-import axios from "axios";
-import { fetchDoctors } from "../redux/doctors/doctors";
-import { fetchDetailDoctors } from "../redux/doctors/DetailDoctors";
-import { addItem } from "../redux/doctors/AddItem";
-import { removeItem } from "../redux/doctors/DeleteList";
-import BaseUrl from "./BaseURL";
+import axios from 'axios';
+import { fetchDoctors } from '../redux/doctors/doctors';
+import { fetchDetailDoctors } from '../redux/doctors/DetailDoctors';
+import { addItem } from '../redux/doctors/AddItem';
+import { removeItem } from '../redux/doctors/DeleteList';
+import BaseUrl from './BaseURL';
 
 export const getDoctors = async (dispatch) => {
   const response = await axios.get(`${BaseUrl}doctors`);
@@ -14,7 +14,7 @@ export const getDoctorsDetail = (id) => async (dispatch) => {
   fetch(`${BaseUrl}doctors/${id}`)
     .then((res) => res.json())
     .then((resResponse) => dispatch(fetchDetailDoctors(resResponse)));
-}
+};
 export const AddItemHandler = async (dispatch, data) => {
   const formData = new FormData();
   formData.append('name', data.name);
@@ -23,12 +23,11 @@ export const AddItemHandler = async (dispatch, data) => {
   formData.append('bio', data.bio);
   formData.append('experience', data.experience);
   try {
-    const response = await axios.post(`${BaseUrl}doctors/create`, formData)
+    const response = await axios.post(`${BaseUrl}doctors/create`, formData);
     dispatch(addItem(response.data));
     return response;
-  }
-    catch (err) {
-      return err.response 
+  } catch (err) {
+    return err.response;
   }
 };
 
@@ -37,5 +36,5 @@ export const deleteDoctor = (id) => async (dispatch) => {
     method: 'DELETE',
   })
     .then((res) => res.json())
-    .then((resResponse) => dispatch(removeItem(resResponse)))
-}
+    .then((resResponse) => dispatch(removeItem(resResponse)));
+};
