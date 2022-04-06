@@ -8,3 +8,9 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DoctorCard from "./DoctorCard";
 import 'swiper/css'
+
+const Main = () => {
+  const doctors = useSelector((state) => state.doctors.doctors) || [];
+  const dispatch = useDispatch();
+
+}
