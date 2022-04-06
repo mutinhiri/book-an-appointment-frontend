@@ -49,6 +49,32 @@ const Main = () => {
           ...
         </Swiper>
       </div>
+      <div className="d-sm-block d-none">
+        <button
+         type="button" className="borderless bg-transparent"
+          onClick={() => {
+            const { swiper } = document.querySelector('swiper');
+            swiper.slidePrev();}
+          }
+        >
+          <div className="main-page-handle-left d-flex justify-content-center align-items-center">
+            <BsFillCaretLeftFill />
+          </div>
+        </button>
+        <button
+          type="button" className="borderless bg-transparent"
+          onClick={() => {
+            const { swiper } = document.querySelector('swiper')
+            swiper.slideNext()
+          }}
+          >
+            <div className="main-page-handle-right d-flex justify-content-center align-items-center">
+              <BsCaretRightFill />
+            </div>
+
+        </button>
+
+      </div>
     </div>
   )
 }
