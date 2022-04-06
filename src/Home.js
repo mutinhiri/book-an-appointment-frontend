@@ -5,8 +5,8 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Appointment from './components/appointments/Appointments';
 import AppointmentForm from './components/appointments/AppointmentForm';
-import DoctorCard from './components/Main/DoctorCard';
 import './App.css';
+import Main from './components/Main';
 
 const Home = () => (
 
@@ -16,11 +16,8 @@ const Home = () => (
       <h1>content</h1>
       <Header />
       <div className="home-content">
-        <DoctorCard />
-        <DoctorCard />
-        <DoctorCard />
-
         <Routes>
+          <Route path="/" element={<Main />} exact />
           <Route path="/appointments" element={<Appointment />} />
           <Route path="/appointment-form" element={<AppointmentForm />} />
         </Routes>
