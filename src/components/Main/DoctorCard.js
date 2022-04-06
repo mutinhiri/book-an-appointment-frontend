@@ -10,7 +10,7 @@ const DoctorCard = ({ doctor, onClick }) => {
     <button type="button" className="bg-transparent bordeless" onClick={() => { onClick(); }}>
       <div className="card borderless">
         <div className="card-image">
-          <img src={image} alt="" className="doctor-card-image" />
+          <img src={image} alt="doctorimage" className="doctor-card-image" />
         </div>
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
