@@ -22,7 +22,7 @@ const AppointmentForm = () => {
   };
 
   const [doctorId, setDoctorId] = useState(getDoctorId());
-  const user = useSelector((state) => state.userReducer.user);
+  const user = useSelector((state) => state.UserReducer.user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -67,7 +67,7 @@ const AppointmentForm = () => {
               Choose from the available locations and the preferred time.
             </p>
           </div>
-          <div className="d-flex create-appointment">
+          <div className="d-flex">
             <select className="form-select me-2 rounded-pill " onChange={(e) => setSelectLocation(e.target.value)} value={selectLocation}>
               {options.map((option) => (
                 <option key={option} value={option}>
@@ -83,7 +83,7 @@ const AppointmentForm = () => {
               ))}
             </select>
           </div>
-          <div>
+          <div className="d-flex justify-content-center w-100 mt-3">
             <DatePicker className="w-50 me-2 rounded-pill form-control" onChange={onChange} value={selectDateOfAppointment} />
           </div>
           <div className="d-flex w-100 justify-content-center pt-5">
