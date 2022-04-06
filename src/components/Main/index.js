@@ -37,7 +37,18 @@ const Main = () => {
     <div>
       <h1 className="fw-bolder text-center">AVAILABLE DOCTORS</h1>
       <p className="text-muted text-center main-screen-subtitle">Please select doctor specialist</p>
-      
+      <div className="row">
+        <Swiper spaceBetween={0} slidesPerView={width > 768 ? 3 : 1}>
+          {doctors.map((doctor) => (
+            <SwiperSlide key={doctor.id}>
+              <div className="d-flex justify-content-center">
+                <DoctorCard doctor={doctor} onClick={() => { GoToDetailPage(doctor.id); }} />
+              </div>
+            </SwiperSlide>
+          ))}
+          ...
+        </Swiper>
+      </div>
     </div>
   )
 }
