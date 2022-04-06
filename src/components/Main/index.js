@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { BsCaretRightFill, BsFillCaretLeftFill } from 'react-icons/bs';
-import Swiper, { SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import './Main.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
