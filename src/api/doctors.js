@@ -19,7 +19,7 @@ export const AddItemHandler = async (dispatch, data) => {
   const formData = new FormData();
   formData.append('name', data.name);
   formData.append('image', data.image);
-  formData.append('speciality', data.speciality);
+  formData.append('specialty', data.specialty);
   formData.append('bio', data.bio);
   formData.append('experience', data.experience);
   try {
