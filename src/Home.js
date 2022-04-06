@@ -4,7 +4,7 @@ import SideBar from './components/SideBar';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Appointment from './components/appointments/Appointments';
-import AppointmentForm from './components/appointments/AppointmentForm';
+// import AppointmentForm from './components/appointments/AppointmentForm';
 import DoctorCard from './components/Main/DoctorCard';
 import './App.css';
 
@@ -22,7 +22,7 @@ const Home = () => (
 
         <Routes>
           <Route path="/appointments" element={<Appointment />} />
-          <Route path="/appointment-form" element={<AppointmentForm />} />
+          {/* <Route path="/appointment-form" element={<AppointmentForm />} /> */}
         </Routes>
       </div>
       <Footer />
