@@ -1,4 +1,4 @@
-const FETCH_DETAIL_DOCTORS = 'book-an-appointment-frontend/motors/FETCH_DETAIL_MOTORS';
+const FETCH_DETAIL_DOCTORS = 'book-an-appointment-frontend/doctors/FETCH_DETAIL_DOCTORS';
 
 export const fetchDetailDoctors = (payload) => ({
   type: FETCH_DETAIL_DOCTORS,
