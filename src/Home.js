@@ -17,8 +17,8 @@ const Home = () => (
       <div className="home-content">
         <Routes>
           <Route path="/" element={<Main />} exact />
-          <Route path="/appointments" element={<Appointment />} />
-          <Route path="/appointment-form" element={<AppointmentForm />} />
+          <Route path="/appointments" element={<AppointmentForm />} />
+          <Route path="/appointment-form" element={<Appointment />} />
         </Routes>
       </div>
       <Footer />

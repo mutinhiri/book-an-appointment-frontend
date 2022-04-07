@@ -7,7 +7,7 @@ import AddAppointmentAPI from '../../api/addAppointmentAPI';
 const AppointmentForm = () => {
   const doctors = useSelector((state) => state.doctors.doctors) || [];
   const location = useLocation();
-  const [selectLocation, setSelectLocation] = useState('MaryLand');
+  const [selectedCity, setCity] = useState('MaryLand');
   const [selectDateOfAppointment, onChange] = useState(new Date());
   const [loginResponse, setLoginResponse] = useState('');
 
@@ -32,7 +32,7 @@ const AppointmentForm = () => {
       setLoginResponse('Date should be greater than today');
     } else {
       const response = await AddAppointmentAPI({
-        Location: selectLocation,
+        city: selectedCity,
         dateOfAppointment: selectDateOfAppointment,
         user_id: user.id,
         doctor_id: parseInt(doctorId, 10),
@@ -68,7 +68,7 @@ const AppointmentForm = () => {
             </p>
           </div>
           <div className="d-flex">
-            <select className="form-select me-2 rounded-pill " onChange={(e) => setSelectLocation(e.target.value)} value={selectLocation}>
+            <select className="form-select me-2 rounded-pill " onChange={(e) => setCity(e.target.value)} value={selectedCity}>
               {options.map((option) => (
                 <option key={option} value={option}>
                   {option}

@@ -6,19 +6,19 @@ import { getUser } from '../redux/users/users';
 import './css/Header.css';
 
 const Header = () => {
-  const [name, setName] = useState('');
+  const [userName, setUserName] = useState('');
   const [loginReponse, setLoginResponse] = useState('');
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await UserApi({ userName: name });
+    const response = await UserApi({ name: userName });
     if (!response.error) {
       setLoginResponse('Usercreated and logged in');
     } else if (response.user) {
       setLoginResponse('User logged in successfully');
     } else {
-      setLoginResponse(response.error.userName);
+      setLoginResponse(response.error.name);
     }
     dispatch(getUser(response.user));
   };
@@ -44,7 +44,7 @@ const Header = () => {
           </ul>
           <div>
             <form className="d-flex align-items-center" onSubmit={handleSubmit}>
-              <input className="form-control me-2 rounded-pill m-0" type="search" placeholder="UserName" aria-label="Search" onChange={(e) => setName(e.target.value)} value={name} />
+              <input className="form-control me-2 rounded-pill m-0" type="search" placeholder="UserName" aria-label="Search" onChange={(e) => setUserName(e.target.value)} value={userName} />
               <button className="btn btn-outline-success rounded-pill" type="submit">Login</button>
             </form>
             {loginReponse ? <div className="text-start ms-2">{loginReponse}</div> : null}
