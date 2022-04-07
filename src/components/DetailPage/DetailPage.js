@@ -18,6 +18,14 @@ const DetailPage = () => {
             <h1>{doctor.name}</h1>
             <p>{doctor.bio}</p>
           </div>
+          <table className="table table-stripped">
+            <tbody>
+              <tr>
+                <td>Area of specialiity</td>
+                <td>{doctor.specialty}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
