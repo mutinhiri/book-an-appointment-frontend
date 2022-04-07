@@ -1,9 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useSelector } from "react-redux";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { BsFillGearFill } from "react-icons/bs";
-import './Detail.css'
+import { useSelector } from 'react-redux';
+import { BsFillArrowRightCircleFill, BsFillGearFill } from 'react-icons/bs';
+import './Detail.css';
 
 const DetailPage = () => {
   const doctor = useSelector((state) => state.doctorsDetailReducer.doctors) || [];
@@ -38,7 +37,7 @@ const DetailPage = () => {
           <div className="d-flex justify-content-end">
             <div className="resorve p-s">
               <BsFillGearFill className="mx-2" size={25} color="white" />
-              <button className="btn btn-primary bg-transparent borderless" type="submit" onClick={() => {navigate('/appointment', {state: {id: doctor.id}}); }}>Appointment</button>
+              <button className="btn btn-primary bg-transparent borderless" type="submit" onClick={() => { navigate('/appointment', { state: { id: doctor.id } }); }}>Appointment</button>
               <BsFillArrowRightCircleFill className="mx-2" size={25} color="white" />
             </div>
           </div>
@@ -48,4 +47,4 @@ const DetailPage = () => {
   );
 };
 
-export default DetailPage
+export default DetailPage;
