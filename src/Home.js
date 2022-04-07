@@ -7,6 +7,7 @@ import Appointment from './components/appointments/Appointments';
 import AppointmentForm from './components/appointments/AppointmentForm';
 import './App.css';
 import Main from './components/Main';
+import DeleteItem from './components/delete/deleteItem';
 
 const Home = () => (
 
@@ -17,8 +18,9 @@ const Home = () => (
       <div className="home-content">
         <Routes>
           <Route path="/" element={<Main />} exact />
-          <Route path="/appointments" element={<AppointmentForm />} />
-          <Route path="/appointment-form" element={<Appointment />} />
+          <Route path="/appointment" element={<AppointmentForm />} />
+          <Route path="/appointments" element={<Appointment />} />
+          <Route path="/delete" element={<DeleteItem />} />
         </Routes>
       </div>
       <Footer />

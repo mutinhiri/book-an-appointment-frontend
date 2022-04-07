@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getDoctors, deleteDoctor } from '../../api/doctors';
-// import './DeleteList.css';
+import './delete.css';
 import Modal from './modal';
 import { deleteOneDoctor } from '../../redux/doctors/doctors';
 
