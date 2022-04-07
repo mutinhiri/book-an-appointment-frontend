@@ -13,6 +13,12 @@ const DetailPage = () => {
         <div className="col=md-8 col-12">
           <img className="w=100 h-100" src={doctor.image} alt={doctor.name} />
         </div>
+        <div className="col-md-3 col-12">
+          <div className="text-md-end">
+            <h1>{doctor.name}</h1>
+            <p>{doctor.bio}</p>
+          </div>
+        </div>
       </div>
     </div>
   )
