@@ -52,7 +52,7 @@ const Main = () => {
           type="button"
           className="borderless bg-transparent"
           onClick={() => {
-            const { swiper } = document.querySelector('swiper');
+            const { swiper } = document.querySelector('.swiper');
             swiper.slidePrev();
           }}
         >
@@ -64,7 +64,7 @@ const Main = () => {
           type="button"
           className="borderless bg-transparent"
           onClick={() => {
-            const { swiper } = document.querySelector('swiper');
+            const { swiper } = document.querySelector('.swiper');
             swiper.slideNext();
           }}
         >
