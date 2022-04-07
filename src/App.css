@@ -2,11 +2,15 @@
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+  width: 230px;
+  background-color: #f8f9fa;
   position: fixed;
   height: 100%;
   overflow: auto;
+}
+
+.sidebar-header {
+  margin-top: 10vh;
 }
 
 /* Sidebar links */
@@ -53,13 +57,12 @@ div.content {
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
+@media screen and (max-width: 500px) {
+  .sidebar {
+    display: none;
   }
 }
 
 .home-content {
-  height: 75vh;
+  height: 85vh;
 }

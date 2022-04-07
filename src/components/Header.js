@@ -23,7 +23,7 @@ const Header = () => {
     dispatch(getUser(response.user));
   };
   return (
-    <div className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className="navbar navbar-expand-lg navbar-light bg-light header-page">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">Doctors</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,14 +31,14 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+            <li className="nav-item no-large-screen">
               <Link to="/" className="nav-link active">Doctors</Link>
             </li>
-            <li className="nav-item">
-              <Link to="/appointment-form" className="nav-link">New Appointment</Link>
+            <li className="nav-item no-large-screen">
+              <Link to="/appointment" className="nav-link">New Appointment</Link>
             </li>
 
-            <li className="nav-item">
+            <li className="nav-item no-large-screen">
               <Link to="/appointments" className="nav-link">Appointments</Link>
             </li>
           </ul>
