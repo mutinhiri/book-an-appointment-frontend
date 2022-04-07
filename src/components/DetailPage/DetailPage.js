@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSelector } from "react-redux";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { BsFillGearFill } from "react-icons/bs";
+import './Detail.css'
 
 const DetailPage = () => {
   const doctor = useSelector((state) => state.doctorsDetailReducer.doctors) || [];
