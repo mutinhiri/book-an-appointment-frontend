@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Appointment from './components/appointments/Appointments';
 import './App.css';
 import Main from './components/Main';
+import DetailPage from './components/DetailPage/DetailPage';
 
 const Home = () => (
 
@@ -18,6 +19,7 @@ const Home = () => (
         <Routes>
           <Route path="/" element={<Main />} exact />
           <Route path="/appointments" element={<Appointment />} />
+          <Route path="/Detail/:id" element={<DetailPage />} />
           {/* <Route path="/appointment-form" element={<AppointmentForm />} /> */}
         </Routes>
       </div>
