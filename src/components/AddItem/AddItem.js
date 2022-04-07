@@ -1,13 +1,11 @@
-import { useForm } from "react-hook-form";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { AddItemHandler } from "../../api/doctors";
-import { getDoctors } from "../../api/doctors";
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { AddItemHandler, getDoctors } from '../../api/doctors';
 
 const AddItem = () => {
   const dispatch = useDispatch();
-  const {
-    register, handleSubmit, reset, } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const [isItemAdded, setIsItemAdded] = useState(null);
   const [errorResponse, setErrorResponse] = useState(null);
 
@@ -18,7 +16,7 @@ const AddItem = () => {
       reset();
       dispatch(getDoctors);
     } else {
-      setErrorResponse(JSON.stringify(response.data))
+      setErrorResponse(JSON.stringify(response.data));
     }
   };
 
@@ -53,7 +51,6 @@ const AddItem = () => {
       </div>
     </div>
   );
-
 };
 
-export default AddItem
+export default AddItem;

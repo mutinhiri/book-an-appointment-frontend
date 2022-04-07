@@ -7,6 +7,7 @@ import Appointment from './components/appointments/Appointments';
 import './App.css';
 import Main from './components/Main';
 import DetailPage from './components/DetailPage/DetailPage';
+import AddItem from './components/AddItem/AddItem';
 
 const Home = () => (
 
@@ -20,6 +21,7 @@ const Home = () => (
           <Route path="/" element={<Main />} exact />
           <Route path="/appointments" element={<Appointment />} />
           <Route path="/Detail/:id" element={<DetailPage />} />
+          <Route path="/AddItem" element={<AddItem />} />
           {/* <Route path="/appointment-form" element={<AppointmentForm />} /> */}
         </Routes>
       </div>
