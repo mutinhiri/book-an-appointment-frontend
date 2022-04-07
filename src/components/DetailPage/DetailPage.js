@@ -24,10 +24,27 @@ const DetailPage = () => {
                 <td>Area of specialiity</td>
                 <td>{doctor.specialty}</td>
               </tr>
+              <tr>
+                <td>Experience years</td>
+                <td>{doctor.experience}</td>
+              </tr>
+              <tr>
+                <td>Availability</td>
+                <td>Yes</td>
+              </tr>
             </tbody>
           </table>
+          <div className="d-flex justify-content-end">
+            <div className="resorve p-s">
+              <BsFillGearFill className="mx-2" size={25} color="white" />
+              <button className="btn btn-primary bg-transparent borderless" type="submit" onClick={() => {navigate('/appointment', {state: {id: doctor.id}}); }}>Appointment</button>
+              <BsFillArrowRightCircleFill className="mx-2" size={25} color="white" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default DetailPage
