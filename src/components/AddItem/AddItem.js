@@ -28,8 +28,9 @@ const AddItem = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="mt-5 mx-3">
           <input type="text" className="form-control m-1" id="name" placeholder="Enter Name" {...register('name')} />
           <input type="text" className="form-control m-1" id="image" placeholder="Enter Image Url" {...register('image')} />
-          <textarea rows="4" cols="50" type="text" className="form-control m-1" id="bio" placeholder="Enter Bio here" {...register('specialty')} />
-          <input type="number" className="form-control m-1" id="price" placeholder="Enter Price" {...register('price')} />
+          <textarea rows="4" cols="50" type="text" className="form-control m-1" id="specialty" placeholder="Enter doctor speciality here" {...register('specialty')} />
+          <textarea rows="4" cols="50" type="text" className="form-control m-1" id="bio" placeholder="Enter Bio here" {...register('bio')} />
+          <input type="number" className="form-control m-1" id="experience" placeholder="Enter Experience" {...register('experience')} />
           <div className="d-flex justify-content-end">
             <button type="submit" className="btn btn-primary m-1">Submit</button>
           </div>
@@ -42,9 +43,9 @@ const AddItem = () => {
           }
 
           {
-            errorReponse && (
+            errorResponse && (
               <div className="alert alert-danger mt-3 ms-1" role="alert">
-                {errorReponse}
+                {errorResponse}
               </div>
             )
           }
