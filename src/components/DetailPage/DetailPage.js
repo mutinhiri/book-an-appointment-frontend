@@ -21,8 +21,8 @@ const DetailPage = () => {
           <table className="table table-stripped">
             <tbody>
               <tr>
-                <td>Area of speciality</td>
-                <td>{doctor.specialty}</td>
+                <td>Consultation Fee</td>
+                <td> $ 50</td>
               </tr>
               <tr>
                 <td>Experience years</td>
