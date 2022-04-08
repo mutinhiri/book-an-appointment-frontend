@@ -1,14 +1,15 @@
 import React from 'react';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => (
   <div className="sidebar">
-    <h1>Doctrs</h1>
-    <a className="active" href="#home">Doctors</a>
-    <a href="#news">Appointments</a>
-    <a href="#news">My Appointments</a>
-    <a href="#contact">New Appointment</a>
-    <a href="#about">Delete Appointment</a>
+    <div className="sidebar-header">
+      <Link to="/">Doctors</Link>
+      <Link to="/appointment">Appointments</Link>
+      <Link to="/appointments">My Appointment</Link>
+      <Link to="/delete">Delete Appointment</Link>
+    </div>
   </div>
 );
 

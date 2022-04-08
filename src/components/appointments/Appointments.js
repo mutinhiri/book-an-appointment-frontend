@@ -14,16 +14,16 @@ const Appointment = () => {
   return (
     <div className="appointment-page">
       {appointments.length > 0 && (
-        <div className="appointment">
-          <h2>Appointments</h2>
-          <div className="appointment-table">
-            <table>
+        <div className="d-flex flex-column justify-content-center">
+          <h2 className="text-center text-white">Appointments</h2>
+          <div className=" w-100 d-flex flex-column justify-content-center align-items-center">
+            <table className="table table-striped w-50">
               <thead>
                 <tr>
-                  <th>S/N</th>
-                  <th>Name</th>
-                  <th>Location</th>
-                  <th>Date</th>
+                  <th scope="col">S/N</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -31,7 +31,7 @@ const Appointment = () => {
                   <tr key={index}>
                     <th>{index + 1}</th>
                     <td>{appointment[1].doctor}</td>
-                    <td>{appointment[0].location}</td>
+                    <td>{appointment[0].city}</td>
                     <td>{appointment[0].dateOfAppointment}</td>
                   </tr>
                 ))}
@@ -41,8 +41,8 @@ const Appointment = () => {
         </div>
       )}
       {appointments.length === 0 && (
-        <div>
-          <h2>No appointment found!</h2>
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <h2 className="text-center text-white">No appointment found!</h2>
         </div>
       )}
     </div>
