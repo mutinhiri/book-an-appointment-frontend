@@ -7,10 +7,10 @@ const DoctorCard = ({ doctor, onClick }) => {
     name, image, bio,
   } = doctor;
   return (
-    <button type="button" className="bg-transparent bordeless" onClick={() => { onClick(); }}>
-      <div className="card borderless">
-        <div className="card-image">
-          <img src={image} alt="doctorimage" className="doctor-card-image rounded-circle" />
+    <button type="button" className="bg-transparent borderless" onClick={() => { onClick(); }}>
+      <div className="card">
+        <div className="">
+          <img src={image} alt="doctorimage" className="card-img-top" />
         </div>
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
