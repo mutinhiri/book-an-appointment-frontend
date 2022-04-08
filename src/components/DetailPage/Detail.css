@@ -7,3 +7,15 @@
   background-color: #97bf11;
   border: 0;
 }
+
+.detail-doctor {
+  width: 85%;
+  height: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+  .detail-doctor {
+    width: 40vw;
+    height: 65vw;
+  }
+}
