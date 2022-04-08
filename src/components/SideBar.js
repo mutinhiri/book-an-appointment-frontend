@@ -7,6 +7,7 @@ const SideBar = () => (
     <div className="sidebar-header">
       <Link to="/">Doctors</Link>
       <Link to="/appointment">Appointments</Link>
+      <Link to="/AddItem">Add Doctor</Link>
       <Link to="/appointments">My Appointment</Link>
       <Link to="/delete">Delete Appointment</Link>
     </div>
