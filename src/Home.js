@@ -8,6 +8,8 @@ import AppointmentForm from './components/appointments/AppointmentForm';
 import './App.css';
 import Main from './components/Main';
 import DeleteItem from './components/delete/deleteItem';
+import DetailPage from './components/DetailPage/DetailPage';
+import AddItem from './components/AddItem/AddItem';
 
 const Home = () => (
 
@@ -21,6 +23,9 @@ const Home = () => (
           <Route path="/appointment" element={<AppointmentForm />} />
           <Route path="/appointments" element={<Appointment />} />
           <Route path="/delete" element={<DeleteItem />} />
+          <Route path="/Detail/:id" element={<DetailPage />} />
+          <Route path="/AddItem" element={<AddItem />} />
+          {/* <Route path="/appointment-form" element={<AppointmentForm />} /> */}
         </Routes>
       </div>
       <Footer />
