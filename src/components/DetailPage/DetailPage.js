@@ -10,7 +10,7 @@ const DetailPage = () => {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col-md-8 col-12">
+        <div className="col-sm-8  col-12">
           <img className="detail-doctor" src={doctor.image} alt={doctor.name} />
         </div>
         <div className="col-md-3 col-12">

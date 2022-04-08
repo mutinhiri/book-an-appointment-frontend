@@ -9,8 +9,8 @@
 }
 
 .detail-doctor {
-  width: 50vw;
-  height: 70vh;
+  width: 85%;
+  height: 80%;
 }
 
 @media only screen and (max-width: 600px) {
