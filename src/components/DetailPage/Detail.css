@@ -10,13 +10,12 @@
 
 .detail-doctor {
   width: 50vw;
-  height: 70vh
+  height: 70vh;
 }
 
-@media only screen and (max-width: 600px){
-  .detail-doctor{
+@media only screen and (max-width: 600px) {
+  .detail-doctor {
     width: 40vw;
     height: 65vw;
   }
-  
 }
