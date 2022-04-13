@@ -25,7 +25,6 @@ const Home = () => (
           <Route path="/delete" element={<DeleteItem />} />
           <Route path="/Detail/:id" element={<DetailPage />} />
           <Route path="/AddItem" element={<AddItem />} />
-          {/* <Route path="/appointment-form" element={<AppointmentForm />} /> */}
         </Routes>
       </div>
       <Footer />
